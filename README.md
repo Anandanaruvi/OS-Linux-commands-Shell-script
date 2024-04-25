@@ -619,8 +619,7 @@ fi
 
 $ chmod 755 iftest.sh
  
-$ ./iftest.sh 
-“The test value 10 is greater than 5” “The values are different”
+$ ./iftest.sh ##OUTPUT“The test value 10 is greater than 5” “The values are different”
 
 # check if a file
 cat > ifnested.sh 
@@ -668,8 +667,7 @@ fi
 
 $ chmod 755 ifnested.sh
  
-$ ./ifnested.sh 
-##OUTPUT
+$ ./ifnested.sh ##OUTPUT/root The object exists, is it a file?” “No,/root it is not a file!”
 
 # looking for a possible value using elif
 cat elifcheck.sh 
