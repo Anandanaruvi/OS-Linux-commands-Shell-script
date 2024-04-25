@@ -978,121 +978,15 @@ cat argshift.sh
   shift 
 done
 ```
-
-
-
-
-
- 
-cat forbreak.sh 
-```bash
-#!/bin/bash
-# breaking out of a for loop
-for var1 in 1 2 3 4 5
-do
-if [ $var1 -eq 3 ]
-then
-break
-fi
-echo "Iteration number: $var1"
-done
-echo "The for loop is completed“
-```
-## OUTPUT
-
-$ chmod 755 forbreak.sh
- 
-$ ./forbreak.sh 
- 
-cat forbreak.sh 
-```bash
-#!/bin/bash
-# breaking out of a for loop
-for var1 in 1 2 3 4 5
-do
-if [ $var1 -eq 3 ]
-then
-continue
-fi
-echo "Iteration number: $var1"
-done
-echo "The for loop is completed“
-```
-
- 
-$ chmod 755 forcontinue.sh
- 
-$ ./forcontinue.sh 
-## OUTPUT
- 
-cat exread.sh 
-```bash
-#!/bin/bash
-# testing the read command
-echo -n "Enter your name: "
-read name
-echo "Hello $name, welcome to my program. "
- ```
- 
-$ chmod 755 exread.sh 
- 
-$ ./exread.sh 
-## OUTPUT
-
-
- cat exread1.sh
-```bash
-#!/bin/bash
-# testing the read command
-read -p "Enter your name: " name
-echo "Hello $name, welcome to my program. “
-``` 
-$ chmod 755 exread1.sh 
-
-## OUTPUT
-
-
-
-$ ./exread1.sh 
- 
-cat funcex.sh
-```bash
-#!/bin/bash
-# trying to access script parameters inside a function
-function func {
-echo $[ $1 * $2 ]
-}
-if [ $# -eq 2 ]
-then
-value=`func $1 $2`
-echo "The result is $value"
-else
-echo "Usage: badtest1 a b"
-fi
-```
-## OUTPUT
- ./funcex.sh 
-
- 
- ./funcex.sh 1 2
-
- 
-cat argshift.sh
-```bash
-#!/bin/bash 
- while (( "$#" )); do 
-  echo $1 
-  shift 
-done
-```
 $ chmod 777 argshift.sh
 
-## OUTPUT
-$ ./argshift.sh 1 2 3
- 
- cat argshift1.sh
-```bash
- #/bin/bash 
+
+
+
+ ### OUTPUT
+
+```
+#/bin/bash 
  # store arguments in a special array 
 args=("$@") 
 # get number of elements 
@@ -1105,10 +999,8 @@ done
 ```
 $ chmod 777 argshift.sh
 ## OUTPUT
-$ ./argshift.sh 1 2 3
- 
-cat argshift.sh
-```bash
+$ ./argshift.sh 1 2 3 1 2 3 cat argshift.sh
+```
 #!/bin/bash 
 set -x 
 while (( "$#" )); do 
@@ -1117,12 +1009,16 @@ while (( "$#" )); do
 done
 set +x
 ```
+
+ 
+
 ## OUTPUT
- ./argshift.sh 1 2 3
- 
- 
+/argshift.sh 1 2 3
+
+(( 0 ))
+set +x
 cat > nc.awk
-```bash
+```
 BEGIN{}
 {
 print len=length($0),"\t",$0 
@@ -1134,9 +1030,9 @@ print "total characters",chrcnt
 print "Number of Lines are",NR
 print "No of Words count:",wordcount
 }
- ```
+```
 cat>data.dat
-```bash
+```
 bcdfghj
 abcdfghj
 bcdfghj
@@ -1149,10 +1045,9 @@ bcdfghj
 ubcdfghj
 ```
 awk -f nc.awk data.dat
-## OUTPUT 
- 
-cat > palindrome.sh
-```bash
+### OUTPUT
+total characters 75 Number of Lines are 10 No of Words count: 10 cat > palindrome.sh
+```
 #num=545
 echo "Enter the number"
 read num
@@ -1176,8 +1071,11 @@ else
 	echo "Number is NOT palindrome"
 fi
 ```
-## OUTPUT 
 
 
-# RESULT:
+### OUTPUT
+Enter the number 121 Number is palindrome Enter the number 69 Number is NOT palindrome
+### RESULT
+
 The Commands are executed successfully.
+
