@@ -714,7 +714,7 @@ fi
 $ chmod 755 ifcompound.sh
 $ ./ifcompound.sh 
 ## OUTPUT
-
+The file exists and you can write to it
 # using the case command
 cat >casecheck.sh 
 ```bash
